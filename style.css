@@ -1,0 +1,1077 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dancing-script-<uniquifier> {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+body{
+    height: 4000px;
+    background-color:#f8fafc;
+}
+header{
+    width: 100%;
+    height: 130px;
+
+}
+.top-head{
+    width: 100%;
+    height: 30px;
+    border: 1px solid  blue;
+    display: flex;
+}
+
+.head-left , .head-right , .head-icons{
+    float: left;
+     display: flex;
+    gap: 25px;
+    
+}
+a{
+    text-decoration: none;
+     color:  #003B95;
+     padding: 0 5px;
+     position: relative;
+}
+
+.head-left{
+    padding-left: 5%;
+   padding-top: 3px;
+   text-transform: capitalize;
+}
+.top-head a::before{              /*left side*/
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: rgb(49, 123, 214);
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+}
+.top-head a:hover::before{
+    height: 22px;
+}
+.top-head a::after{              /*right side*/
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: rgb(49, 123, 214);
+    transition: 0.4s;
+    bottom: 2px;
+    right: 0;
+}
+.top-head a:hover::after{
+    height: 22px;
+}
+.head-right{
+    padding-left: 35%;
+     padding-top: 3px;
+   text-transform: capitalize;
+}
+.head-icons{
+    margin-left: 30px;
+}
+.head-icons i{
+      padding-left: 5%;
+      padding-top: 5px;
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 5px;
+      line-height: 30px;
+      font-size: 16px;
+      position: relative;
+}
+.head-icons i:hover{
+    transform: rotatey(180deg);
+    color: rgb(0, 106, 255);
+}
+.head-icons i::after{
+      content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;      
+    width: 0;
+    height: 2px;
+    background-color: rgb(49,123,214);
+    transition: .4s;
+}
+.head-icons i:hover::after{
+    width: 100%;
+}
+
+.main-head{
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    display: flex;
+}
+.logo{
+    width: 130px;
+    height: 80px;
+     padding-left: 7%;
+     padding-top: 5px;
+}
+.img-logo{
+      border-radius: 40%;
+      background-size: cover;
+}
+.head-links {
+   list-style-type: none;
+   display: flex;
+   gap: 25px;
+   padding-top: 30px;
+   padding-left: 25%;
+}
+.head-links li a{
+    text-decoration: none;
+    position: relative;
+}
+.head-links li{
+  font-size: 18px;
+  text-transform: capitalize;
+  position: relative;
+  color: rgb(0, 85, 255);
+  padding: 5px 10px;
+}
+.head-links li::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    border: 2px solid #2659e7 ;
+    transform: scale(0);
+    transform-origin: left;
+    transition: 1s;
+}
+.head-links li:hover::after{
+    transform: scale(1);
+}
+.nav{
+    list-style:none;
+}
+.page{
+    position:relative;
+    display:inline-block;
+}
+.pages-list{
+    position:absolute;
+    top:100%;
+    left:0;
+    background:white;
+    border:1px solid #2659e7;
+    padding:20px;
+    gap:30px;
+    flex-direction:row;
+    min-width:280px;
+    z-index:9999;
+    border-radius: 10px;
+     opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 1s;
+    display:flex;
+}
+
+.page:hover .pages-list{
+    opacity:1;
+    visibility:visible;
+    transform: translateY(0);
+}
+
+.pages-list a{
+    display:block;
+    padding:6px 0;
+    text-decoration:none;
+    color:black;
+    font-size: 16px;
+}
+.pages-list a:hover{
+    transform: scale(1.05);
+    color:#2659e7;
+}
+
+.title-info{
+    color:#2659e7;
+}
+.main-icon{
+    display: flex;
+    gap: 25px;
+    padding-top: 30px;
+    padding-left: 10%;
+    font-size: 20px;
+    cursor: pointer;
+}
+.main-icon i{
+    transition: .3s;
+}
+.main-icon i:hover{
+    transform: scale(1.05);
+    color: rgb(38, 89, 231);
+}
+.offer-head{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;   
+    align-items: center;  
+    background-color: #003B95;
+    position: absolute;
+    z-index: 2;
+}
+.offer , .book{
+    text-transform: capitalize;
+    font-size: 19px;
+    color:white;
+    
+}
+.book{
+    text-decoration:underline ;
+    cursor: pointer;
+    transition: .3s;
+    padding-left: 2px;
+}
+.book:hover{
+    transform: scale(1.05);
+    letter-spacing: 2px;
+}
+.hero{
+    width: 100%;
+    height: 650px;
+    position: relative;
+}
+.img-hero{
+    background-size: cover;
+    background-attachment: fixed;
+}
+.describe{
+    width:450px ;
+    height:400px ;
+   transform: translate(50%,-140%);
+    position: absolute;
+    text-align: center;
+}
+
+.title1-describe{
+    font-size: 28px;
+    font-family:"Dancing Script", cursive;
+    padding-top: 5%;
+    color: white;
+
+}
+.title2-describe{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 26px;
+    padding: 3% 0px;
+}
+.p-hero{
+    font-size: 18px;
+    color:#a4a0a0;
+}
+.btn1{
+    padding: 3% 0;
+    width: 150px;
+    margin-top: 5%;
+    font-size: 18px;
+    font-family:cursive;
+    color:white;
+    cursor: pointer;
+    background-color:  #003B95;
+    transition: .5s;
+}
+.btn1:hover{
+    transform: scale(1.05);
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.title1-describe {
+  animation: fadeDown 1.5s ease forwards;
+}
+
+.title2-describe {
+  animation: fadeDown 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.p-hero {
+  animation: fadeDown 1s ease forwards;
+  animation-delay: 0.9s;
+}
+
+.btn1 {
+  animation: fadeDown 1.5s ease forwards;
+  animation-delay: 1.3s;
+}
+.title1-describe,
+.title2-describe,
+.p-hero,
+.btn1 {
+  opacity: 0;
+}
+
+.travel-places{
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+}
+.contianer-places{
+    width: 90%;
+    margin: auto;
+}
+
+.place1 , .place2 , .place3{
+    width: 330px;
+    height: 300px;
+    position: relative;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+.place1{
+    margin-left: 100px;
+}
+.place2{
+    margin: 0 100px;
+}
+.img-place{
+    background-size: cover;
+      
+       transition: 1s;
+}
+.place-name{
+    position: absolute;
+    font-size:24px ;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: translate(35%,-140%);
+    text-align: center;
+    color:white ;
+    padding: 5% 0;
+   text-shadow: 0 4px 10px rgba(0,0,0,0.9);
+    transition: transform 1s ease;
+}
+.name3{
+    transform: translate(20%,-140%);
+    transition: transform 1s ease;
+}
+.name1{
+     transform: translate(25%,-140%);
+     transition: transform 1s ease;
+}
+.site:hover .place-name{
+     transform: translateY(-20px);
+}
+.place-p {
+  position: absolute;
+  bottom: 10px; /* مكان النص الطبيعي */
+  width: 100%;
+  text-align: center;
+  color:white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  /* شادو ناعم */
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
+
+  /* نخلي النص يبدأ تحت شوي */
+  transform: translateY(20px) ;
+  opacity: 0;
+  text-decoration: underline;
+  /* حركة سلسة */
+  transition: all 1s ease;
+}
+
+/* عند الـ hover على المكان كله */
+.site:hover .place-p {
+  transform: translateY(0) ; /* يطلع لفوق */
+  opacity: 1;               /* يظهر تدريجيًا */
+
+}
+.place-p:hover{
+  word-spacing: 3px;
+  color:#003B95;
+}
+.site:hover .img-place{
+    transform: scale(1.1);
+}
+.trips {
+   margin-top: -200px;
+   padding-bottom: 50px;
+}
+
+.container-trips {
+    width: 90%;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trips-title {
+    font-size: 34px;
+    color: #003B95;
+}
+
+.parts a {
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    color: #555;
+    position: relative;
+}
+
+.parts a:hover {
+    color: blue;
+}
+
+.active {
+    color: blue;
+}
+
+/* الخط الرمادي */
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+    margin-top: 15px;
+}
+
+/* الخط الأحمر تحت العنصر النشط */
+.active-line {
+    width: 90px; 
+    height: 4px;
+    background-color:#003B95;
+    margin-top: -3px;
+    margin-left: 85%; 
+}
+
+.pictures{
+    width: 100%;
+    height: 500px;
+}
+.container-pictures{
+    width: 90%;
+    margin: auto;  
+}
+.parent-pictures{
+   
+     display: flex;
+    justify-content: space-between;  
+    gap: 20px; 
+    text-align: center;
+}
+.picture{
+    float: left;
+     width: 330px;
+    position: relative;
+    overflow: hidden;
+    height:380px ;
+    cursor: pointer;
+}
+.card{
+      position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    /* السر هنا: خاصية العمق */
+    perspective: 1000px; 
+}
+.half-img{
+  
+    z-index: 2;
+    transform: rotateY(0deg) translateZ(0);
+}
+.picture-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+     z-index: 1;
+    opacity: 0;
+    /* لفة -90 درجة وبعيدة لورا في محور Z */
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.card img {
+       width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); /* حركة ناعمة جداً */
+    backface-visibility: hidden; /* عشان ظهر الصورة ميبانش ويشوه المنظر */
+}
+
+
+.picture:hover .half-img {
+    opacity: 0;
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.picture:hover .picture-overlay {
+ opacity: 1;
+    /* بترجع لدرجة 0 وبمحور Z صفر عشان تبان إنها قربت للمشاهد */
+    transform: rotateY(0deg) translateZ(0);
+    z-index: 3;
+}
+
+/* --- تنسيق أيقونات التفاعل --- */
+.product-actions {
+    position: absolute;
+    bottom: 70px; /* نزلناها تحت مكانها الطبيعي */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(20px);
+  opacity: 0;
+
+  /* حركة سلسة */
+  transition: all 1s ease;
+}
+
+/* حالة الهوفر: ارفع الأيقونات وأظهرها */
+.picture:hover .product-actions {
+    bottom: 80px; /* تطلع لمكانها الأصلي */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تنسيق شكل الأيقونات نفسها */
+.product-actions a {
+    background-color: #fff;
+    color:#003B95;
+    padding: 12px 18px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px) rotate(-5deg); }
+  50% { transform: translateX(3px) rotate(5deg); }
+  75% { transform: translateX(-3px) rotate(-5deg); }
+  100% { transform: translateX(0); }
+}
+
+/* لما الماوس يلمس أيقونة معينة (زي اللون الأحمر في الصورة) */
+.product-actions a:hover {
+    background-color:#0f172a;
+    color: #fff;
+}
+.product-actions a:hover i{
+    display: inline-block; /* ضروري عشان الـ transform يشتغل */
+    animation: shake 0.3s ease-in-out infinite;
+}
+
+.pictures-title{
+    font-size: 20px;
+    font-weight: normal;
+    padding: 5px 0;
+    
+}
+.picture:hover .pictures-title{
+    color:#003B95;
+}
+.picture-p{
+    font-size: 16px;
+    color: gray;
+}
+.picture-span{
+    padding-left: 8px;
+    text-decoration:line-through;
+}
+.picture:hover .picture-p{
+    color: black;
+}
+.picture:hover .picture-span{
+    color: gray;
+}
+.travel{
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.travel-div{
+    width: 100%;
+    height: 450px;
+   background-color: #273449;
+   text-align: center;
+   border: 2px solid gray;
+}
+.title-review{
+    color: white;
+    padding-top: 25px;
+    font-size: 33px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.travel-review{
+    font-size: 20px;
+   padding: 20px  300px;
+   color:#a4a0a0;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.travel-icon1{
+    margin-left: 15%;
+    line-height: 450px;
+    position: absolute;
+    font-size: 30px;
+   color:#a4a0a0;
+   cursor: pointer;
+}
+.travel-icon2{
+    margin-left: 80%;
+   line-height: 450px;
+    position: absolute;
+    font-size: 35px;
+    color:#a4a0a0;
+    cursor:pointer ;
+}
+.travel-icon1 i:hover , .travel-icon2 i:hover{
+    color: rgb(69, 69, 228);
+    transform: scale(1.09);
+}
+.travel-img{
+    border-radius: 50%;
+    margin-right: 20%;
+    margin-top: 50px;
+}
+.traveler-name{
+    color: white;
+margin-left: 5%;
+    margin-top: -110px;
+}
+.info{
+    margin-top: 10px;
+    margin-left: 5%;
+    color:gray ;
+}
+.explore{
+    width: 100%;
+    height: 600px;
+}
+.container-explore{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+}
+.explore-title{
+    text-align: center;
+    font-size: 33px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#003B95;
+}
+.explore-arrow{
+    line-height: 350px;
+}
+.explore-arrow i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.explore-arrow i:hover{
+    color: rgb(52, 94, 173) ;
+    transform: scale(1.09);
+}
+.explore-places{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    text-align: center;
+}
+.parent-explore{
+    display: flex;
+    gap: 25px;
+    overflow: hidden;
+}
+.img-overlay{
+   position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: 1s ease-in-out;
+   opacity: 0;
+}
+.explore-places:hover .img-overlay{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.product-actions {
+    position: absolute;
+    bottom: 120px; /* نزلناها تحت مكانها الطبيعي */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(20px);
+  opacity: 0;
+
+  /* حركة سلسة */
+  transition: all 1s ease;
+}
+
+/* حالة الهوفر: ارفع الأيقونات وأظهرها */
+.explore-places:hover .product-actions {
+    bottom: 130px; /* تطلع لمكانها الأصلي */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تنسيق شكل الأيقونات نفسها */
+.product-actions a {
+    background-color: #fff;
+    color:#003B95;
+    padding: 12px 18px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px) rotate(-5deg); }
+  50% { transform: translateX(3px) rotate(5deg); }
+  75% { transform: translateX(-3px) rotate(-5deg); }
+  100% { transform: translateX(0); }
+}
+
+/* لما الماوس يلمس أيقونة معينة (زي اللون الأحمر في الصورة) */
+.product-actions a:hover {
+    background-color:#273449;
+    color: #fff;
+}
+.product-actions a:hover i{
+    display: inline-block; /* ضروري عشان الـ transform يشتغل */
+    animation: shake 0.3s ease-in-out infinite;
+}
+.explore1-title{
+    font-size: 20px;
+}
+.explore-places:hover .explore1-title{
+    color:#003B95;
+}
+.price1-p{
+    font-size: 18px;
+    padding-top: 8px;
+    color: gray;
+}
+.explore-places:hover .price1-p{
+    color: black;
+}
+.price1-span{
+    padding-left:5px;
+    text-decoration:line-through;
+}
+.explore-places:hover .price1-span{
+    color: grey;
+}
+.updates{
+    background-color:  #273449;
+    width: 100%;
+    height: 700px;
+    border: 1px solid gray;
+}
+.update-title{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+}
+.container-updates{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+.parent-updates{
+    position: relative;
+}
+.div-updates{
+    float: left;
+    position: relative;
+    width:350px ;
+    height:450px ;
+}
+.div2{
+    margin: 0px 70px;
+}
+.div1{
+    margin-left: 90px;
+}
+ .img-update:hover{
+    transform: scale(1.03);
+    transition: 1s;
+}
+.tips-title{
+    color: #e2e8f0;
+    margin-top: 10px;
+    font-weight: 100;
+}
+.updates-p{
+    color: #e2e8f0;
+    margin: 10px 0px;
+    font-size: 16px;
+}
+.title2{
+    color:#cbd5e1;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 100;
+}
+.div-updates:hover .title2{
+     color: #60a5fa;
+}
+.updates-a{
+    text-decoration: underline;
+    font-size: 18px;
+    color: #60a5fa;
+
+}
+.updates-a:hover{
+    letter-spacing: 2px;
+    transform: scale(1.05);
+    transition: .3s;
+}
+.icons{
+    width: 100%;
+    height: 200px;
+}
+.parent.icons{
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+}
+.icons-div{
+    float: left;
+    gap: 25px;
+margin-left: 7%;
+height: 100px;
+text-align: center;
+
+}
+.plan{
+ line-height:100px ;
+ font-size: 40px;
+ color: rgb(117, 155, 222);
+ position: relative;
+}
+.icon-addres{
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+.icon-p{
+    color: grey;
+    padding-top: 5px;
+
+}
+
+/* الحاوية الأساسية للقسم */
+.icons-div {
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+}
+
+/* حاوية الأيقونات - هي دي اللي فيها السحر */
+.plan {
+    position: relative; /* عشان نثبت الأيقونات جواها */
+    height: 50px;       /* حدد طول مناسب للأيقونة */
+    overflow: hidden;   /* أي حاجة تخرج بره الـ 50 بكسل تختفي */
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan i {
+    font-size: 40px;
+    transition: transform 0.2s ease; /* سرعة الحركة */
+    position: absolute; 
+}
+
+/* الأيقونة الفاتحة (في مكانها الطبيعي) */
+.icon-light {
+    color: #a4a0a0; /* لون فاتح أو شفافية */
+    opacity: 0.6;
+}
+
+/* الأيقونة الغامقة (نازلة لتحت ومستخبية) */
+.icon-dark {
+    color:  #273449; /* لون أحمر غامق مثلاً */
+    transform: translateY(50px); /* نزلناها تحت بمسافة طول الحاوية */
+}
+
+/* تأثير الهوفر */
+.icons-div:hover .icon-light {
+    transform: translateY(-50px); /* تطلع لفوق وتختفي */
+}
+
+.icons-div:hover .icon-dark {
+    transform: translateY(0); /* تطلع من تحت وتستقر في النص */
+}
+
+/* اختياري: تغيير لون النص عند الهوفر */
+.icons-div:hover h3 {
+    color: blue;
+    transition: 0.3s;
+}
+.end{
+   background-color: #0f172a;
+    height: 500px;
+    padding: 30px 60px;
+}
+.end1{
+position: relative;
+}
+.end-title{
+    display: inline;
+    color: white;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+input{
+    display: inline;
+   margin-left: 20%;
+   width: 300px;
+   height: 40px;
+   padding-left: 10px;
+   font-size: 16px;
+}
+.end-btn{
+    height: 44px;
+    width: 120px;
+    font-size: 18px;
+   background-color: blue;
+   color: white;
+   margin-left: 10px;
+   cursor: pointer;
+   
+}
+.end-btn a{
+    text-decoration: none;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.end-btn:hover{
+    transform: scale(1.09);
+}
+.end-icons{
+    display: inline;
+    margin-left: 23%;
+}
+.end-icons i{
+    color:grey;
+    font-size: 20px;
+    padding: 0 8px;
+    transition: 0.3 ease-in-out;
+}
+.end-icons i:hover{
+    color: white;
+    transform: scale(1.09);
+}
+.end-p{
+    color: #a4a0a0;
+    font-size: 15px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.end1-line{
+     width: 100%;
+    height: 1px;
+    background-color: grey;
+    margin-top: 15px;
+}
+.end2{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 30px 0;
+}
+.logo-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.end-logo{
+    border-radius: 100%;
+}
+.name-logo{
+    color: white;
+    text-transform: capitalize;
+
+}
+.end-adress{
+    font-size: 17px;
+    color: white;
+    padding: 20px 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.end-list li{
+    list-style: none;
+    padding: 7px 0;
+    transition: 0.5s ease-in-out;
+}
+.end-list a{
+   color: #a4a0a0;
+  font-size: 14px;
+ 
+}
+.end-list a:hover{
+    text-decoration: underline;
+}
+.end-list li:hover{
+     transform: scale(1.09);
+     word-spacing: 1px;
+     
+}
+.last{
+    text-align: center;
+    padding: 30px 0;
+}
+.last-sp{
+   color: #a4a0a0;
+}
+.last-a{
+    
+    font-size: 17px;
+ font-weight: bold;
+    background: linear-gradient(90deg, #60a5fa, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 20px rgba(37,99,235,0.5);
+    transition: 0.5s ease-in-out;
+}
+.last-a:hover{
+    transform: scale(1.09);
+    letter-spacing: 2px;
+    text-decoration: underline;
+ 
+}
